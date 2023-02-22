@@ -1,0 +1,52 @@
+<html>
+  <head>
+    <title>
+      suggest an idea - just a website
+    </title>
+    <link href="../../../style_dark.css" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" type="image/png" href="../../../images.png"/>
+    <meta charset="UTF-8">
+    <meta name="description" content="suggest stuff">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="image" content="../images.png">
+  </head>
+  <body>
+    <big><big><big><big>suggest an idea</big></big></big></big><br>
+    discord username & tag: <input id="name" placeholder="text here"></input>
+    <br>
+    idea:
+    <br>
+    <textarea id="idea" rows="12" cols="100" placeholder="big text here"></textarea>
+    <br>
+    <br>
+    <a id="submit" class="btn btn-submit" onclick="sendMessage()" href="#">submit</a>
+    <br>
+    <br>
+    <b>you must make a website suggestion.</b> once you send a suggestion thats not for the website, <b>your suggestion will be immediately rejected.</b>
+    <br><br>
+    <a href="../../../start/" class="btn btn-general">back to homepage</a><br>
+    <script>
+      function sendMessage() {
+        const request = new XMLHttpRequest();
+        request.open("POST", "https://discord.com/api/webhooks/991780273593262090/5rcAC9gOr8tuO5N6SG-8oC3jLjsi3AcDOwxt9hchYAaxMl12LD_dCBRSWdoNTaTA8oNR");
+  
+        request.setRequestHeader('Content-type', 'application/json');
+  
+        const params = {
+          username: "New Suggestion Adviser",
+          avatar_url: "",
+          content: `
+<@921808007145324594>          
+Discord username and tag: ${document.getElementById("name").value}
+
+Idea:
+${document.getElementById("idea").value}
+`
+        }
+        request.send(JSON.stringify(params));
+        
+      }
+      
+    </script>
+  </body>
+</html>

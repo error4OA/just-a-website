@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <title>
+      join - just a website
+    </title>
+    <link href="../../../style_dark.css" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" type="image/png" href="../../../images.png"/>
+    <meta charset="UTF-8">
+    <meta name="description" content="join 2 syllables">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="image" content="../images.png">
+  </head>
+  <body>
+    <big><big><big><big>join</big></big></big></big><br>
+    syllable 1:
+    <input id="syllable1" placeholder="syllable here"></input>
+    <br><br>
+    syllable 2:
+    <input id="syllable2" placeholder="syllable here"></input>
+    <br>
+    <br>
+    <a id="join" class="btn btn-join" href="#">join</a>
+    <br>
+    <br>
+    <div id="result"></div>
+    <br><br>
+    <a href="../../../start/" class="btn btn-general">back to homepage</a>
+    <script>
+      document.getElementById("join").onclick = function() {
+        document.getElementById("result").textContent = document.getElementById("syllable1").value + document.getElementById("syllable2").value
+      }
+    </script>
+  </body>
+</html>

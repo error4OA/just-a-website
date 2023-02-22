@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      javascript executor - just a website
+    </title>
+    <link href="../../../style_dark.css" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" type="image/png" href="../../../images.png"/>
+    <meta charset="UTF-8">
+    <meta name="description" content="execute js scripts (output will be logged to console only)">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="image" content="../images.png">
+  </head>
+  <body>
+    <big><big><big><big>js executor</big></big></big></big><br>
+    code:
+    <br>
+    <textarea id="code" rows="12" cols="100" placeholder="code here"></textarea>
+    <br><br>
+    <br>
+    <br>
+    <a id="execute" class="btn btn-general" href="#">execute</a>
+    <br><br>
+    <a href="../../../start/" class="btn btn-general">back to homepage</a>
+    <script>
+      document.getElementById("execute").onclick = function() {
+        console.log(eval(document.getElementById("code").value))
+      }
+    </script>
+  </body>
+</html>

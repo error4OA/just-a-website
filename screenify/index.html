@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      screenify - just a website
+    </title>
+    <link href="../../../style_dark.css" rel="stylesheet" type="text/css"/>
+    <link rel="shortcut icon" type="image/png" href="../../../images.png"/>
+    <meta charset="UTF-8">
+    <meta name="description" content="no longer developing this but ok">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="image" content="../pfp.png">
+  </head>
+  <body>
+    <script>
+      window.onload = function() {
+      alert("oh hi there! looks like youve reached a secret page")
+      }
+    </script>
+    <big><big><big><big>Screenify</big></big></big></big>
+    <br>
+    <small><small><small>this is still in beta, expect things to break/change</small></small></small>
+    <br>
+    <small><small><small>this utility only supports 3 chars in the y axis stuff</small></small></small>
+    <br>
+    <br>
+    info:<br>0 = black<br>1 = white
+    <br>
+    code 1: <input id="code1" placeholder="code here"></input>
+    <br>
+    code 2: <input id="code2" placeholder="code here"></input>
+    <br>
+    code 3: <input id="code3" placeholder="code here"></input>
+    <br><br>
+    <a id="submit" class="btn btn-general" href="#">submit</a>
+    <br><br>
+    output:
+    <br>
+    <div id="output1"></div>
+    <div id="output2"></div>
+    <div id="output3"></div>
+    <br><br>
+    <a href="../../start" class="btn btn-general">back to homepage</a>
+    <script>
+      var ouput = ""
+      document.getElementById("submit").onclick = function() {
+        output1 = document.getElementById("code1").value.replace(/0/g, "⬛").replace(/1/g, "⬜")
+        document.getElementById("output1").textContent = output1
+        console.log("LINE 1 SUCCESSFUL (" + code1.value + " --> " + output1 + ")")
+        output2 = document.getElementById("code2").value.replace(/0/g, "⬛").replace(/1/g, "⬜")
+        document.getElementById("output2").textContent = output2
+        console.log("LINE 2 SUCCESSFUL (" + code2.value + " --> " + output2 + ")")
+        output3 = document.getElementById("code3").value.replace(/0/g, "⬛").replace(/1/g, "⬜")
+        document.getElementById("output3").textContent = output3
+        console.log("LINE 3 SUCCESSFUL (" + code3.value + " --> " + output3 + ")")
+      }
+    </script>
+  </body>
+</html>
